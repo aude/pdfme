@@ -18,7 +18,7 @@ REM You should have received a copy of the GNU General Public License
 REM along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 REM Intro.
-echo Will convert input files to PDF using LibreOffice ...
+echo Will convert input files to PDF using LibreOffice...
 echo.
 
 REM Variables.
@@ -28,7 +28,7 @@ set input=%*
 REM If not file was input, go to the end of the batch.
 if not exist %1 (
 	echo No file was input.
-	echo Will now exit ...
+	echo Will now exit...
 	echo.
 	
 	REM Flee!
@@ -40,7 +40,7 @@ for %%a in (%input%) do (
     REM Make working directory the path of the current processing file.
     cd /d %%~dpa
 	REM Inform.
-	echo Will convert "%%~a" to "%cd:"=%\%%~na.pdf" ...
+	echo Will convert "%%~a" to "%cd:"=%\%%~na.pdf"...
 	
 	REM Execute.
 	%libreofficeexe% --headless --convert-to pdf "%%~a"
