@@ -30,7 +30,7 @@ if not exist %1 (
 	echo No file was input.
 	echo Will now exit...
 	echo.
-	
+
 	REM Flee!
 	goto endmessage
 )
@@ -41,10 +41,10 @@ for %%a in (%input%) do (
     cd /d %%~dpa
 	REM Inform.
 	echo Will convert "%%~a" to "%cd:"=%\%%~na.pdf"...
-	
+
 	REM Execute.
 	%libreofficeexe% --headless --convert-to pdf "%%~a"
-    
+
     REM Make space.
     echo.
 )
